@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Love Letter ❤️</title>
+
+<style>
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Georgia, serif;
+    background: linear-gradient(135deg, #ff0000, #ffffff);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* Envelope */
+.envelope {
+    width: 280px;
+    height: 180px;
+    background: white;
+    border: 4px solid red;
+    border-radius: 12px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: red;
+    font-weight: bold;
+    font-size: 18px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.envelope:hover {
+    transform: scale(1.05);
+    background: #ffe6e6;
+}
+
+/* Letter */
+.letter {
+    display: none;
+    background: white;
+    border: 5px solid red;
+    border-radius: 20px;
+    padding: 25px;
+    width: 90%;
+    max-width: 420px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    position: relative;
+    animation: fadeIn 2s ease forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.8); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+h1 {
+    color: red;
+    margin-top: 10px;
+}
+
+p {
+    font-size: 16px;
+    color: #333;
+}
+
+/* Photo */
+.photo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 4px solid red;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+/* Flowers */
+.flower {
+    position: absolute;
+    font-size: 30px;
+}
+
+.left {
+    left: -20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.right {
+    right: -20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* Hearts */
+.heart {
+    position: absolute;
+    color: red;
+    font-size: 20px;
+    animation: floatUp 5s linear forwards;
+}
+
+@keyframes floatUp {
+    0% { transform: translateY(0); opacity: 1; }
+    100% { transform: translateY(-800px); opacity: 0; }
+}
+
+.signature {
+    margin-top: 15px;
+    font-weight: bold;
+    color: red;
+}
+</style>
+</head>
+
+<body>
+
+<!-- MUSIC -->
+<audio id="music" loop>
+    <source src="https://www.bensound.com/bensound-music/bensound-romantic.mp3" type="audio/mp3">
+</audio>
+
+<!-- Envelope -->
+<div class="envelope" onclick="openLetter()">
+    💌 Click to Open My Heart 💌
+</div>
+
+<!-- Letter -->
+<div class="letter" id="letter">
+
+    <div class="flower left">🌹</div>
+    <div class="flower right">🌹</div>
+
+    <!-- YOUR PHOTO -->
+    <img src="https://i.pinimg.com/1200x/55/da/08/55da08ff21278eba0add6cd9acf5d839.jpg" class="photo" alt="Our Photo">
+
+    <h1>My Love ❤️</h1>
+
+    <p id="message">
+        Hi baby! HAPPY VALENTINES DAY just want to say that you are the most beautiful part of my life.
+        Every moment with you feels magical and full of love and I'm very thankful to have you in my life alwasy I am so lucky to have you. I LOVE YOU SO MUCH MY BABY.
+
+    </p>
+
+    <div class="signature">
+        Forever Yours,<br>
+        ❤️ <span id="Yannie">Yannie</span>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
